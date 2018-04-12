@@ -1,0 +1,74 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+var a=[]
+<script>
+function search (){
+
+	//	↓改這裡 ----------------------------------------------------------------
+	var str="B3FA1";
+	//var str;
+
+	// 拿到的值如下，/address的路徑在依照後台的路徑修改
+	var address="";
+	// $.getJSON("/address", function(result){ // -> result: 全部拿到的數值  
+ //        str=result.address; // ->讓str=address
+ //    });
+	
+	
+	//--------------------------------------------------------------------------
+	// ↓判斷地圖功能這樣就可以，B3F的方法也就是按照這樣去判斷即可
+
+	var floor=str.split("F")[0];
+	var area=str.split("F")[1];
+	var base=document.getElementsByClassName('mapBase');
+	var cover=document.getElementsByClassName('mapCover');
+	for (var i=0;i<cover.length;i++) {
+		cover[i].style="background-image:'';";
+		cover[i].style.opacity=0;
+	}
+
+	for (var i=0;i<base.length;i++){}
+		if(base[i].attributes["id"].value!=floor+'F')
+			base[i].style.display="none";
+	document.getElementById(floor+'Fc').style="background-image:url("+floor+"F"+area+".png)";
+	document.getElementById(floor+'Fc').style.opacity=1;
+}
+</script>
+<button onclick="search();">search</button> <input type="text" id="address">
+<div class="mapBase" id="B2F">
+	<div class="mapCover" id="B2Fc" ></div>
+</div>
+
+
+<div class="mapBase" id="B3F">
+	<div class="mapCover" id="B3Fc"></div>
+</div>
+</body>
+<style>
+.mapBase {
+	width:700px;
+	height:507px;
+	top:40px;
+	position:fixed;
+}
+#B2F {
+	background-image: url(B2F.png);
+}
+#B3F {
+	background-image: url(B3F.png);
+	left:750px;
+}
+.mapCover {
+	width:100%;
+	height:100%;
+	opacity:0;
+	transition-duration:1s;
+}
+</style>
+</html>

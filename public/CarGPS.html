@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="icon" href="img/ICON.jpg">
+		<title>Car Here</title>
+		
+		<!-- Bootstrap core CSS -->
+		<!--最後一定要用壓縮過的min.css檔 -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css"rel="stylesheet">
+		<link href="css/untitled-font-1.css"rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="css/carousel.css" rel="stylesheet">
+		<!-- 字體 -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		
+		<meta name="description" content="">
+		<meta name="author" content="">
+		
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	</head>
+
+	<body>
+		<div class="ch-back1">
+		<nav class="chtop ch-fixed-top">
+			<ul class="chtop-inside">
+				<li class="chtop-logo"><div><a href="CH.html">
+					<div class="icon icon-logo"></div></div></a></li>
+					<a href="#" class="button-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
+					
+				<ul class="chtop-container">
+			    <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">我的仁愛 <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                <ul class="dropdown-list">
+                <li><a href="Floor.html">樓層簡介</a></li>
+                <li><a href="FloorRoute.html">停車路線</a></li>
+              </li>	
+            </ul>
+             	<li class="dropdown ">
+                <a href="#" class="dropdown-toggle " data-toggle="dropdown">仁愛消息<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                <ul class="dropdown-list">
+                <li><a href="News.html">最新消息</a></li>
+                <li><a href="Health.html">停車衛教</a></li>
+              </li>
+            </ul>
+				<li><span class="chtop-border"><a href="CarGPS.html">愛滴掐恰</a></span></li>
+				<li><a href="Traffic.html">交通指引</a></li>
+				<li><a href="Member.html">會員資訊</a></li>
+				<li class="chtop-right"><div><a id="isLogin" href="Login.html">登入<i class="fa fa-sign-in" aria-hidden="true"></i></div></a></li>
+			
+					 
+			</ul>
+			</ul>
+			</nav>
+			<div class="floor-center">
+　　	<div class="floor-button">
+　　      <button class="record-button record-button-circle button-rose"onclick="getLocation()">記錄</button>
+　　	</div>
+</div>
+			<div class="carsearch">車位查詢</div>
+  				<div class="searchgps">
+  					<input type="text" id="number" placeholder="輸入車牌號碼"/>
+  					<button onclick="search();"><span id="search" class="glyphicon glyphicon-search"></span></button>
+				</div> 
+			<div class="route-text" id="BFt">B2F</div>
+			<div class="route-map mapBase" id="B2F" >
+				<img class="mapCover" src="img/B2F.png" id="B2Fc">
+			</div>
+			<div class="route-text" id="B3Ft">B3F</div>
+			<div class="route-map mapBase" id="B3F">
+				<img class="mapCover" src="img/B3F.png" id="B3Fc">
+			</div>
+                    
+   <div class="footer-section-2">
+	<div class="row">
+		<div class="container2">
+			<div class="col-md-4 footer-border">
+				<div class="footer-menu-title">仁愛資訊</div>
+				<ul class="footer-menu-list">
+					<li><a href="http://www.jah.org.tw/content_type_m/index.asp?m=15&m1=3&m2=12">仁愛簡介</a></li>
+					<li><a href="http://www.jah.org.tw/content/index.asp?m=1&m1=4&m2=27">掛號服務</a></li>
+					<li><a href="http://www.jah.org.tw/content/index.asp?m=1&m1=5&m2=33">病患須知</a></li>
+					<li><a href="http://www.jah.org.tw/showm2/index.asp?m1=6">醫療資源</a></li>
+					<li><a href="http://www.jah.org.tw/news/index.asp?m=9&m1=7&m2=69">新聞專區</a></li>
+					<li><a href="http://www.jah.org.tw/form/indexS.asp?m=3&m1=8&m2=362&gp=361">醫藥知識</a></li>
+					<li><a href="http://www.jah.org.tw/content/index.asp?m=1&m1=9&m2=81">顧客服務</a></li>
+					<li><a href="http://www.jah.org.tw/banner/index.asp?m=99&m1=10&m2=90">教學研究</a></li>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+				</ul>
+			</div>
+			<div class="col-md-4 footer-border">
+				<div class="footer-menu-title">快速連結</div>
+				<ul class="footer-menu-list">
+					<li><a href="http://www.jah.org.tw/netreg/Rindex.asp?m=99&m1=4&m2=428&gp=29">線上掛號</a></li>
+					<li><a href="http://www.jah.org.tw/netreg/schedule.asp?m=99&m1=4&m2=30">門診時間</a></li>
+					<li><a href="http://www.jah.org.tw/sickbed/index.asp?m=99&m1=5&m2=76">急診動態</a></li>
+					<li><a href="http://www.jah.org.tw/tour_manD/index.asp?m=23&m1=6&m2=219&gp=59&gp1=118">醫師介紹</a></li>
+					<li><a href="http://www.jah.org.tw/content/index.asp?m=1&m1=4&m2=28">看哪一科</a></li>
+					<li><a href="http://www.jah.org.tw/content/index.asp?m=1&m1=5&m2=42&gp=34&gp1=38">就醫指引</a></li>
+					<li><a href="http://www.jah.org.tw/periodical/index.asp?m=99&m1=8&m2=78">仁愛醫訊</a></li>
+					<li><a href="http://www.jah.org.tw/content/index.asp?m=1&m1=3&m2=20&gp=17">交通指引</a></li>
+					<li><a href="http://www.jah.org.tw/links/index.asp?m=11&m1=13&m2=380">好站連接</a></li>
+					<div>&nbsp;</div>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<div class="footer-menu-title">特色醫療中心</div>
+				<ul class="footer-menu-list">
+					<li class="footer-text"><a href="http://site.jah.org.tw/diabetes/index.asp">糖尿病中心</a></li>
+					<li><a href="http://oncology.jah.org.tw/">腫瘤治療中心</a></li>
+					<li class="footer-text"><a href="http://baby.jah.org.tw/webnursery.asp">仁愛網路育嬰房</a></li>
+					<li><a href="http://cancer-medicine.jah.org.tw/">癌症防治中心</a></li>
+					<li><a href="http://health.jah.org.tw/health.asp">健康檢查中心</a></li>
+					<li><a href="http://obesity.jah.org.tw/">台灣代謝手術中心</a></li>
+					<li><a href="http://taiwanspinecenter.com.tw/index.htm">台灣脊椎中心</a></li>
+					<li><a href="http://beauty.jah.org.tw/beauty.asp">醫學美容中心</a></li>
+					<li><a href="http://www.tqtest.com.tw/">嗅覺智能訓練中心</a></li>
+					<li><a href="http://cardiovascular.jah.org.tw/">心臟血管中心</a></li>
+					<li><a href="http://site.jah.org.tw/international/international.asp">國際病患中心</a></li>
+				</ul>
+			</div>
+
+			
+		</div>
+	</div>
+</div>
+			<header>
+				
+			</header>
+			<nav>
+				<p>
+				
+				</p>
+				<p>
+				
+				</p>
+			</nav>
+
+			<div>
+
+			</div>
+				
+			<footer>
+				<p>
+					
+				</p>
+				</footer>
+		 <footer class="chfooter">
+     		<div class="chfooter-inside">
+     			<p class="chfooter-left">&copy;2017Car Here</p>
+        		<li class="chfooter-logo"><a href="CH.html">CAR HERE</a></li>
+        		<ul class="chfooter-right">
+     			<li><a href="Floor.html"><i class="fa fa-book" aria-hidden="true"></i></a></li>
+				<li><a href="News.html"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+				<li><a href="Traffic.html"><i class="fa fa-map-signs" aria-hidden="true"></i></a></li>
+				<li><a href="CarGPS.html"><i class="fa fa-map-marker" aria-hidden="true"></i></a></li>
+				<li><a href="Login.html"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+				</ul>
+     		</div>
+    	</footer>
+			<div class='gotop2'>
+  <i class="fa fa-chevron-up" aria-hidden="true"></i>
+</div>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <!--最後一定要用壓縮過的min.JS檔 -->
+    <script src="js/bootstrap.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/location.js"></script>
+    <style type="text/css">
+    	
+    </style>
+    
+    <script type="text/javascript">
+		$( document ).ready(function() {
+		    if(localStorage.getItem("username")==null){
+		    	$("#isLogin").text("登入");
+		    	alert("請先登入");
+				window.location.href="/Login.html";
+		    }else{
+		    	
+		    	$("#isLogin").text(localStorage.getItem("username"));	
+		    }
+		});
+
+
+		function getLocation(){
+			var cars = ["B2FA1", "B2FA2", "B2FA3","B2FA4","B2FA5",
+	                "B2FA6","B2FA7","B2FA8","B2FA9","B3FA1","B3FA2","B3FA3","B3FA4","B3FA5","B3FA6","B3FA7"];
+			var x = Math.floor((Math.random() * 15) + 0);
+		
+			$.post("/location",{account:localStorage.getItem("account"),address:cars[x]}, function(result) {
+					console.log("cars[x]= "+cars[x]);
+				    if(result[0].isSucssess=="success"){
+				        alert("定位成功");
+				    }else{
+				        alert("定位失敗");
+				    }
+			});
+		}	
+		
+		var str;
+		function search (){
+			
+			// 拿到的值如下，/address的路徑在依照後台的路徑修改
+			$.post("/search",{number:$("#number").val()}, function(result) {
+				console.log("number= "+$("#number").val());
+				if(result){
+					alert("搜尋成功");
+					console.log(result);
+					str = result[0].location;
+					changeMap();
+				}else{
+					alert("搜尋失敗");
+				}
+			});
+	
+		}	
+		
+		// 判斷地圖
+		function changeMap(){
+			var floor=str.split("F")[0];
+			var area=str.split("F")[1];
+			var base=document.getElementsByClassName('mapBase');
+			var cover=document.getElementsByClassName('mapCover');			
+		
+			for (var i=0;i<cover.length;i++) {
+				cover[i].style.opacity=0;
+			}	
+			
+			for (var i=0;i<base.length;i++)
+				if(base[i].attributes["id"].value!=floor+'F')
+					base[i].style.display="none";
+					
+			if(floor == "B2"){
+				$("#BFt").text("B2F");
+				$("#B2Fc").attr("src","./car123/"+floor+"F"+area+".png");
+				document.getElementById(floor+'Fc').style.opacity = 1;					
+			}else{
+				$("#BFt").text("B3F");
+				$("#B3Fc").attr("src","./car123/"+floor+"F"+area+".png");
+				document.getElementById(floor+'Fc').style.opacity = 1;
+			}
+			document.getElementById("B3Ft").style.display="none";
+		}		
+	</script>
+    </div>
+	</body>
+</html>

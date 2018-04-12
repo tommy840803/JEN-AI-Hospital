@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>註冊Car Here</title>
+		
+		<!-- Bootstrap core CSS -->
+		<!--最後一定要用壓縮過的min.css檔 -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css"rel="stylesheet">
+		<link href="css/untitled-font-1.css"rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="css/carousel.css" rel="stylesheet">
+		<!-- 字體 -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	</head>
+
+	<body>
+		<nav class="chtop ch-fixed-top">
+			<ul class="chtop-inside">
+				<li class="chtop-logo"><div><a href="CH.html">
+					<div class="icon icon-logo"></div></div></a></li>
+					<a href="#" class="button-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
+					
+				<ul class="chtop-container">
+			    <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">我的仁愛 <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                <ul class="dropdown-list">
+                <li><a href="Floor.html">樓層簡介</a></li>
+                <li><a href="FloorRoute.html">停車路線</a></li>
+              </li>	
+            </ul>
+             	<li class="dropdown ">
+                <a href="#" class="dropdown-toggle " data-toggle="dropdown">仁愛消息<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                <ul class="dropdown-list">
+                <li><a href="News.html">最新消息</a></li>
+                <li><a href="Health.html">停車衛教</a></li>
+              </li>
+            </ul>
+				<li><a href="CarGPS.html">愛滴掐恰</a></li>
+				<li><a href="Traffic.html">交通指引</a></li>
+				<li><a href="Member.html">會員資訊</a></li>
+				<li class="chtop-right"><div><a id="isLogin" href="Login.html">登入<i class="fa fa-sign-in" aria-hidden="true"></i></div></a></li>
+			
+					 
+			</ul>
+			</ul>
+			</nav>
+		<div class="register-container">
+		<form class="form-horizontal" action="/register" method="post">
+			<h1 class="register-heading">歡迎加入Car&nbsp;Here!</h1>
+			<input type="email" class="form-register" name="account" placeholder="帳號">
+			<input type="text" class="form-register" name="password" placeholder="密碼">
+			<input type="text" class="form-register" name="name" placeholder="姓名">
+			<input type="text" class="form-register" name="number" placeholder="車號">
+			<input type="text" class="form-register" name="address" placeholder="地址">
+			<input type="text" class="form-register" name="phone" placeholder="電話">
+		<button class="register-submit submitcolor" type="submit">註冊</button>
+		</form>
+		</div>
+		<div>
+			
+			<header>
+				
+			</header>
+			<nav>
+				<p>
+				
+				</p>
+				<p>
+				
+				</p>
+			</nav>
+
+			<div>
+
+			</div>
+
+			<footer>
+				<p>
+				
+				</p>
+			</footer>
+		</div>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+     <!--最後一定要用壓縮過的min.JS檔 -->
+    <script src="js/bootstrap.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			if(localStorage.getItem("username") ===null){
+				$("#isLogin").text("登入");
+			}else{
+				localStorage.clear();
+				alert("使用者已登出");
+				$("#isLogin").text("登入");
+			}
+		});
+	</script>
+	</body>
+</html>
