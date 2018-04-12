@@ -141,9 +141,6 @@ server.post("/loveRate", function(req, res, next){
 });
 
 
-
-
-
 //紀錄現在登入帳號
 var nowLoginAccount;
 
@@ -170,9 +167,6 @@ server.get("/search",function(req, res, next){
   });
 });        
         
-
-//"insert into test2(account,password,name,number,address,phone) values('"+req.body.account+"','"+req.body.password+"','"+req.body.name+"','"+req.body.number+"','"+req.body.address+"','"+req.body.phone+"');"
-
 
 //車輛定位
 server.post("/location", function(req, res, next){
@@ -221,11 +215,3 @@ server.get("*", function(req, res, next){
 });
 
 
-//var str="B2FA2";
-// var str;
-
-//拿到的值如下, /address的路徑在依照後台的路徑修改
-// var address="";
-// $.getJSON("/address", function(result){ // -> result: 全部拿到的數值
-//     str=result.address; // ->讓str=address
-// });
