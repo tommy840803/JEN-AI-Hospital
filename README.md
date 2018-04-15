@@ -10,7 +10,7 @@ Database : MySQL
 
 home page
 
-![image](./Readme Image/home.PNG)
+![image](https://github.com/tommy840803/JEN-AI-Hospital/blob/master/Readme%20Image/home.PNG)
 
 
 
